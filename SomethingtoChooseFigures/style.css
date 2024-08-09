@@ -1,3 +1,10 @@
+div#error {
+    display: "none";
+    margin: 10px;
+    color: crimson;
+    font-weight: bold;
+}
+
 div#output {
     margin: 10px;
     font-size: 18px;
