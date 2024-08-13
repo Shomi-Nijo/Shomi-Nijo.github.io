@@ -3,6 +3,8 @@ var min = 1;
 var max
 var choice
 var randomIndex
+var arrow
+var choiceElement =[];
 let maxArray = [];
 let choiceArray= [];
 
@@ -15,8 +17,14 @@ window.onload = function () {
     // 「数字を選ぶ」を押下する
     document.getElementById("choose").onclick = function getRandom(){
 
+        // エラーの初期化
         document.getElementById('error').style.display = "none";
+
+        // 出力の初期化
         document.getElementById('output').style.display = "block";
+
+        // 番号の初期化
+        document.getElementById('output').innerHTML = "";
 
         //　出力用配列の初期化
         choiceArray = [];
@@ -38,17 +46,32 @@ window.onload = function () {
 
             // 数字の数だけランダムに数字を取得する
             for(let i = choice; i > 0; i--){
-                // 出力用配列に追加
+                // 取得した数字を出力用配列に追加
                 randomIndex = Math.floor(Math.random() * maxArray.length);
                 choiceArray.push(maxArray[randomIndex]);
-                // 配列の要素の削除
+
+                // 既に取得した数字を枠配列から削除
                 maxArray.splice(randomIndex,1);
+
+                // 出力場所の取得
+                outputElement = document.getElementById('output');
+
+                // 取得した数字をdiv要素として出力
+                var outputchild = choiceArray.indexOf(choiceArray.at(-1));
+                choiceElement[outputchild] = document.createElement('div');
+                choiceElement[outputchild].style.width = "50px";
+                choiceElement[outputchild].innerHTML = choiceArray.at(-1);
+
+                outputElement.appendChild(choiceElement[outputchild]);
+
+                // 選択する残りの数が1より大きい場合、>を追加する
+                if(i > 1){
+                    arrow = document.createElement('div');
+                    arrow.classList.add('arrow')
+                    arrow.innerHTML = ">";
+                    outputElement.appendChild(arrow);
+                }
             }
-            // 結果の出力
-            //for(let i = choice; i > 0; i--){
-            
-            //}
-            document.getElementById('output').textContent = choiceArray.toString();
         }
     }
 }
