@@ -1,16 +1,275 @@
 // 変数
 var min = 1;
-var max
-var choice
-var randomIndex
-var arrow
+var max;
+var choice;
+var randomIndex;
+var bracketColor;
+var arrow;
 var choiceElement =[];
-let maxArray = [];
-let choiceArray= [];
+var maxArray = [];
+var choiceArray= [];
 
-// 関数
+// 番号配列の生成関数
 const range = (start, stop, step) =>
     Array.from({ length: (stop - start) / step + 1 }, (_, i) => start + i * step);
+
+// 枠色の割り当て関数
+const allotColor = () => {
+    switch(true){
+        case max == 18:
+            switch(true){
+                case choiceArray.at(-1) >= 16:
+                    bracketColor = "bracketColor_pink";
+                    break;
+                case choiceArray.at(-1) >= 13:
+                    bracketColor = "bracketColor_orange";
+                    break;
+                case choiceArray.at(-1) >= 11:
+                    bracketColor = "bracketColor_green";
+                    break;
+                case choiceArray.at(-1) >= 9:
+                    bracketColor = "bracketColor_yellow";
+                    break;
+                case choiceArray.at(-1) >= 7:
+                    bracketColor = "bracketColor_blue";
+                    break;
+                case choiceArray.at(-1) >= 5:
+                    bracketColor = "bracketColor_red";
+                    break;
+                case choiceArray.at(-1) >= 3:
+                    bracketColor = "bracketColor_black";
+                    break;
+                case choiceArray.at(-1) >= 1:
+                    bracketColor = "bracketColor_white";
+                    break;
+            };
+            break;
+        case max >= 16:
+            switch(true){
+                case choiceArray.at(-1) >= 15:
+                    bracketColor = "bracketColor_pink";
+                    break;
+                case choiceArray.at(-1) >= 13:
+                    bracketColor = "bracketColor_orange";
+                    break;
+                case choiceArray.at(-1) >= 11:
+                    bracketColor = "bracketColor_green";
+                    break;
+                case choiceArray.at(-1) >= 9:
+                    bracketColor = "bracketColor_yellow";
+                    break;
+                case choiceArray.at(-1) >= 7:
+                    bracketColor = "bracketColor_blue";
+                    break;
+                case choiceArray.at(-1) >= 5:
+                    bracketColor = "bracketColor_red";
+                    break;
+                case choiceArray.at(-1) >= 3:
+                    bracketColor = "bracketColor_black";
+                    break;
+                case choiceArray.at(-1) >= 1:
+                    bracketColor = "bracketColor_white";
+                    break;
+            };
+            break;
+        case max == 15:
+            switch(true){
+                case choiceArray.at(-1) >= 14:
+                    bracketColor = "bracketColor_pink";
+                    break;
+                case choiceArray.at(-1) >= 12:
+                    bracketColor = "bracketColor_orange";
+                    break;
+                case choiceArray.at(-1) >= 10:
+                    bracketColor = "bracketColor_green";
+                    break;
+                case choiceArray.at(-1) >= 8:
+                    bracketColor = "bracketColor_yellow";
+                    break;
+                case choiceArray.at(-1) >= 6:
+                    bracketColor = "bracketColor_blue";
+                    break;
+                case choiceArray.at(-1) >= 4:
+                    bracketColor = "bracketColor_red";
+                    break;
+                case choiceArray.at(-1) >= 2:
+                    bracketColor = "bracketColor_black";
+                    break;
+                case choiceArray.at(-1) >= 1:
+                    bracketColor = "bracketColor_white";
+                    break;
+            };
+            break;
+        case max == 14:
+            switch(true){
+                case choiceArray.at(-1) >= 13:
+                    bracketColor = "bracketColor_pink";
+                    break;
+                case choiceArray.at(-1) >= 11:
+                    bracketColor = "bracketColor_orange";
+                    break;
+                case choiceArray.at(-1) >= 9:
+                    bracketColor = "bracketColor_green";
+                    break;
+                case choiceArray.at(-1) >= 7:
+                    bracketColor = "bracketColor_yellow";
+                    break;
+                case choiceArray.at(-1) >= 5:
+                    bracketColor = "bracketColor_blue";
+                    break;
+                case choiceArray.at(-1) >= 3:
+                    bracketColor = "bracketColor_red";
+                    break;
+                case choiceArray.at(-1) >= 2:
+                    bracketColor = "bracketColor_black";
+                    break;
+                case choiceArray.at(-1) >= 1:
+                    bracketColor = "bracketColor_white";
+                    break;
+            };
+            break;
+        case max == 13:
+            switch(true){
+                case choiceArray.at(-1) >= 12:
+                    bracketColor = "bracketColor_pink";
+                    break;
+                case choiceArray.at(-1) >= 10:
+                    bracketColor = "bracketColor_orange";
+                    break;
+                case choiceArray.at(-1) >= 8:
+                    bracketColor = "bracketColor_green";
+                    break;
+                case choiceArray.at(-1) >= 6:
+                    bracketColor = "bracketColor_yellow";
+                    break;
+                case choiceArray.at(-1) >= 4:
+                    bracketColor = "bracketColor_blue";
+                    break;
+                case choiceArray.at(-1) >= 3:
+                    bracketColor = "bracketColor_red";
+                    break;
+                case choiceArray.at(-1) >= 2:
+                    bracketColor = "bracketColor_black";
+                    break;
+                case choiceArray.at(-1) >= 1:
+                    bracketColor = "bracketColor_white";
+                    break;
+            };
+            break; 
+        case max == 12:
+            switch(true){
+                case choiceArray.at(-1) >= 11:
+                    bracketColor = "bracketColor_pink";
+                    break;
+                case choiceArray.at(-1) >= 9:
+                    bracketColor = "bracketColor_orange";
+                    break;
+                case choiceArray.at(-1) >= 7:
+                    bracketColor = "bracketColor_green";
+                    break;
+                case choiceArray.at(-1) >= 5:
+                    bracketColor = "bracketColor_yellow";
+                    break;
+                case choiceArray.at(-1) >= 4:
+                    bracketColor = "bracketColor_blue";
+                    break;
+                case choiceArray.at(-1) >= 3:
+                    bracketColor = "bracketColor_red";
+                    break;
+                case choiceArray.at(-1) >= 2:
+                    bracketColor = "bracketColor_black";
+                    break;
+                case choiceArray.at(-1) >= 1:
+                    bracketColor = "bracketColor_white";
+                    break;
+            };
+            break; 
+        case max == 11:
+            switch(true){
+                case choiceArray.at(-1) >= 10:
+                    bracketColor = "bracketColor_pink";
+                    break;
+                case choiceArray.at(-1) >= 8:
+                    bracketColor = "bracketColor_orange";
+                    break;
+                case choiceArray.at(-1) >= 6:
+                    bracketColor = "bracketColor_green";
+                    break;
+                case choiceArray.at(-1) >= 5:
+                    bracketColor = "bracketColor_yellow";
+                    break;
+                case choiceArray.at(-1) >= 4:
+                    bracketColor = "bracketColor_blue";
+                    break;
+                case choiceArray.at(-1) >= 3:
+                    bracketColor = "bracketColor_red";
+                    break;
+                case choiceArray.at(-1) >= 2:
+                    bracketColor = "bracketColor_black";
+                    break;
+                case choiceArray.at(-1) >= 1:
+                    bracketColor = "bracketColor_white";
+                    break;
+            };
+            break;
+        case max == 10:
+            switch(true){
+                case choiceArray.at(-1) >= 9:
+                    bracketColor = "bracketColor_pink";
+                    break;
+                case choiceArray.at(-1) >= 7:
+                    bracketColor = "bracketColor_orange";
+                    break;
+                case choiceArray.at(-1) >= 6:
+                    bracketColor = "bracketColor_green";
+                    break;
+                case choiceArray.at(-1) >= 5:
+                    bracketColor = "bracketColor_yellow";
+                    break;
+                case choiceArray.at(-1) >= 4:
+                    bracketColor = "bracketColor_blue";
+                    break;
+                case choiceArray.at(-1) >= 3:
+                    bracketColor = "bracketColor_red";
+                    break;
+                case choiceArray.at(-1) >= 2:
+                    bracketColor = "bracketColor_black";
+                    break;
+                case choiceArray.at(-1) >= 1:
+                    bracketColor = "bracketColor_white";
+                    break;
+            };
+            break; 
+        case max <= 9:
+            switch(true){
+                case choiceArray.at(-1) >= 8:
+                    bracketColor = "bracketColor_pink";
+                    break;
+                case choiceArray.at(-1) == 7:
+                    bracketColor = "bracketColor_orange";
+                    break;
+                case choiceArray.at(-1) == 6:
+                    bracketColor = "bracketColor_green";
+                    break;
+                case choiceArray.at(-1) == 5:
+                    bracketColor = "bracketColor_yellow";
+                    break;
+                case choiceArray.at(-1) == 4:
+                    bracketColor = "bracketColor_blue";
+                    break;
+                case choiceArray.at(-1) == 3:
+                    bracketColor = "bracketColor_red";
+                    break;
+                case choiceArray.at(-1) == 2:
+                    bracketColor = "bracketColor_black";
+                    break;
+                case choiceArray.at(-1) == 1:
+                    bracketColor = "bracketColor_white";
+                    break;
+            };
+            break;
+    };
+}
 
 // ページを読み込む
 window.onload = function () {
@@ -44,21 +303,26 @@ window.onload = function () {
             // 枠配列の生成
             maxArray = range(min,max,1);
 
+            // 出力場所の取得
+            outputElement = document.getElementById('output');
+
             // 数字の数だけランダムに数字を取得する
             for(let i = choice; i > 0; i--){
                 // 取得した数字を出力用配列に追加
                 randomIndex = Math.floor(Math.random() * maxArray.length);
                 choiceArray.push(maxArray[randomIndex]);
 
-                // 既に取得した数字を枠配列から削除
+                // 既に取得した数字を番号配列から削除
                 maxArray.splice(randomIndex,1);
 
-                // 出力場所の取得
-                outputElement = document.getElementById('output');
+                // 枠色の割り当て
+                allotColor()
 
                 // 取得した数字をdiv要素として出力
                 var outputchild = choiceArray.indexOf(choiceArray.at(-1));
+
                 choiceElement[outputchild] = document.createElement('div');
+                choiceElement[outputchild].classList.add(bracketColor);
                 choiceElement[outputchild].style.width = "50px";
                 choiceElement[outputchild].innerHTML = choiceArray.at(-1);
 
