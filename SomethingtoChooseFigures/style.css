@@ -23,10 +23,43 @@ div#output > div {
     margin:5px;
 }
 
+/* 枠色の割り当て */
+div#output > div.bracketColor_white {
+    background-color: #FFFFFF;
+}
+
+div#output > div.bracketColor_black {
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+div#output > div.bracketColor_red {
+    background-color: #fe0000;
+}
+
+div#output > div.bracketColor_blue {
+    background-color: #4286f5;
+}
+
+div#output > div.bracketColor_yellow {
+    background-color: #ffff00;
+}
+
+div#output > div.bracketColor_green {
+    background-color: #00af50;
+}
+
+div#output > div.bracketColor_orange {
+    background-color: #ffc000;
+}
+
+div#output > div.bracketColor_pink {
+    background-color: #ff66ff;
+}
+
 div#output > div.arrow {
     border: #FFFFFF;
 }
-
 
 @media(max-width:800px){
     form {
