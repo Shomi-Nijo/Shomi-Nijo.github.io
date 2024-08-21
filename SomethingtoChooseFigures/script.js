@@ -374,7 +374,7 @@ window.onload = function () {
                 objectIndex = j
                 allotColor()
 
-                // 現在の値が1より大きい場合、-を追加する
+                // 現在の値が1以上の場合、-を追加する
                 if(j >= 1){
                     arrow = document.createElement('div');
                     arrow.classList.add('arrow')
