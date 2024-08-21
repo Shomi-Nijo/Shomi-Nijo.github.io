@@ -1,14 +1,42 @@
+/* タイトル */
+h1 {
+    text-align: center;
+}
+
+/* エラーの表示 */
+
 div#error {
     display: "none";
     margin: 10px;
     color: crimson;
     font-weight: bold;
+    text-align: center;
 }
 
+/* 見出し、箇条書きのインデント */
+h3 {
+    text-indent: 2em;
+}
+
+p {
+    text-indent:3em;
+}
+
+/* 入力部分 */
+form {
+    text-align: center;
+}
+
+input#choose {
+    margin:5px
+}
+
+/* 出力部分 */
 div#output {
     width:300px;
     height: 39px;
-    margin: 10px;
+    margin: 0 auto;
+    margin-top: 10px;
     font-size: 18px;
     font-weight: bold;
     border: 1px solid #000000;
@@ -21,6 +49,10 @@ div#output > div {
     display:inline-block;
     text-align: center;
     margin:5px;
+}
+
+div#output > div.arrow {
+    border: #FFFFFF;
 }
 
 /* 枠色の割り当て */
@@ -57,24 +89,25 @@ div#output > div.bracketColor_pink {
     background-color: #ff66ff;
 }
 
-div#output > div.arrow {
-    border: #FFFFFF;
-}
-
+/* モバイル用 */
 @media(max-width:800px){
     form {
         width: fit-content;
         margin:0px auto;
+        text-align: center;
     }
+
+    p {
+        text-indent: 0em;
+    }
+
     div#output {
         width:300px;
         height: 39px;
-        margin: auto;
         margin-top: 10px;
         font-size: 18px;
         font-weight: bold;
         border: 1px solid #000000;
         background-color: #FFFFFF;
-        text-align: center;
     }
 }
