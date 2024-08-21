@@ -10,7 +10,6 @@ var arrow;
 var choiceElement =[];
 var maxArray = [];
 var choiceArray= [];
-var sortedArray =[];
 
 // 番号配列の生成関数
 const range = (start, stop, step) =>

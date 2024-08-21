@@ -51,10 +51,6 @@ div#output > div {
     margin:5px;
 }
 
-div#output > div.arrow {
-    border: #FFFFFF;
-}
-
 /* 枠色の割り当て */
 div#output > div.bracketColor_white {
     background-color: #FFFFFF;
@@ -89,7 +85,11 @@ div#output > div.bracketColor_pink {
     background-color: #ff66ff;
 }
 
-/* モバイル用 */
+div#output > div.arrow {
+    border: #FFFFFF;
+}
+
+
 @media(max-width:800px){
     form {
         width: fit-content;
