@@ -2,7 +2,9 @@
 var min = 1;
 var max;
 var choice;
+var mode;
 var randomIndex;
+var objectIndex;
 var bracketColor;
 var arrow;
 var choiceElement =[];
@@ -18,257 +20,262 @@ const allotColor = () => {
     switch(true){
         case max == 18:
             switch(true){
-                case choiceArray.at(-1) >= 16:
+                case choiceArray[objectIndex] >= 16:
                     bracketColor = "bracketColor_pink";
                     break;
-                case choiceArray.at(-1) >= 13:
+                case choiceArray[objectIndex] >= 13:
                     bracketColor = "bracketColor_orange";
                     break;
-                case choiceArray.at(-1) >= 11:
+                case choiceArray[objectIndex] >= 11:
                     bracketColor = "bracketColor_green";
                     break;
-                case choiceArray.at(-1) >= 9:
+                case choiceArray[objectIndex] >= 9:
                     bracketColor = "bracketColor_yellow";
                     break;
-                case choiceArray.at(-1) >= 7:
+                case choiceArray[objectIndex] >= 7:
                     bracketColor = "bracketColor_blue";
                     break;
-                case choiceArray.at(-1) >= 5:
+                case choiceArray[objectIndex] >= 5:
                     bracketColor = "bracketColor_red";
                     break;
-                case choiceArray.at(-1) >= 3:
+                case choiceArray[objectIndex] >= 3:
                     bracketColor = "bracketColor_black";
                     break;
-                case choiceArray.at(-1) >= 1:
+                case choiceArray[objectIndex] >= 1:
                     bracketColor = "bracketColor_white";
                     break;
             };
             break;
         case max >= 16:
             switch(true){
-                case choiceArray.at(-1) >= 15:
+                case choiceArray[objectIndex] >= 15:
                     bracketColor = "bracketColor_pink";
                     break;
-                case choiceArray.at(-1) >= 13:
+                case choiceArray[objectIndex] >= 13:
                     bracketColor = "bracketColor_orange";
                     break;
-                case choiceArray.at(-1) >= 11:
+                case choiceArray[objectIndex] >= 11:
                     bracketColor = "bracketColor_green";
                     break;
-                case choiceArray.at(-1) >= 9:
+                case choiceArray[objectIndex] >= 9:
                     bracketColor = "bracketColor_yellow";
                     break;
-                case choiceArray.at(-1) >= 7:
+                case choiceArray[objectIndex] >= 7:
                     bracketColor = "bracketColor_blue";
                     break;
-                case choiceArray.at(-1) >= 5:
+                case choiceArray[objectIndex] >= 5:
                     bracketColor = "bracketColor_red";
                     break;
-                case choiceArray.at(-1) >= 3:
+                case choiceArray[objectIndex] >= 3:
                     bracketColor = "bracketColor_black";
                     break;
-                case choiceArray.at(-1) >= 1:
+                case choiceArray[objectIndex] >= 1:
                     bracketColor = "bracketColor_white";
                     break;
             };
             break;
         case max == 15:
             switch(true){
-                case choiceArray.at(-1) >= 14:
+                case choiceArray[objectIndex] >= 14:
                     bracketColor = "bracketColor_pink";
                     break;
-                case choiceArray.at(-1) >= 12:
+                case choiceArray[objectIndex] >= 12:
                     bracketColor = "bracketColor_orange";
                     break;
-                case choiceArray.at(-1) >= 10:
+                case choiceArray[objectIndex] >= 10:
                     bracketColor = "bracketColor_green";
                     break;
-                case choiceArray.at(-1) >= 8:
+                case choiceArray[objectIndex] >= 8:
                     bracketColor = "bracketColor_yellow";
                     break;
-                case choiceArray.at(-1) >= 6:
+                case choiceArray[objectIndex] >= 6:
                     bracketColor = "bracketColor_blue";
                     break;
-                case choiceArray.at(-1) >= 4:
+                case choiceArray[objectIndex] >= 4:
                     bracketColor = "bracketColor_red";
                     break;
-                case choiceArray.at(-1) >= 2:
+                case choiceArray[objectIndex] >= 2:
                     bracketColor = "bracketColor_black";
                     break;
-                case choiceArray.at(-1) >= 1:
+                case choiceArray[objectIndex] >= 1:
                     bracketColor = "bracketColor_white";
                     break;
             };
             break;
         case max == 14:
             switch(true){
-                case choiceArray.at(-1) >= 13:
+                case choiceArray[objectIndex] >= 13:
                     bracketColor = "bracketColor_pink";
                     break;
-                case choiceArray.at(-1) >= 11:
+                case choiceArray[objectIndex] >= 11:
                     bracketColor = "bracketColor_orange";
                     break;
-                case choiceArray.at(-1) >= 9:
+                case choiceArray[objectIndex] >= 9:
                     bracketColor = "bracketColor_green";
                     break;
-                case choiceArray.at(-1) >= 7:
+                case choiceArray[objectIndex] >= 7:
                     bracketColor = "bracketColor_yellow";
                     break;
-                case choiceArray.at(-1) >= 5:
+                case choiceArray[objectIndex] >= 5:
                     bracketColor = "bracketColor_blue";
                     break;
-                case choiceArray.at(-1) >= 3:
+                case choiceArray[objectIndex] >= 3:
                     bracketColor = "bracketColor_red";
                     break;
-                case choiceArray.at(-1) >= 2:
+                case choiceArray[objectIndex] >= 2:
                     bracketColor = "bracketColor_black";
                     break;
-                case choiceArray.at(-1) >= 1:
+                case choiceArray[objectIndex] >= 1:
                     bracketColor = "bracketColor_white";
                     break;
             };
             break;
         case max == 13:
             switch(true){
-                case choiceArray.at(-1) >= 12:
+                case choiceArray[objectIndex] >= 12:
                     bracketColor = "bracketColor_pink";
                     break;
-                case choiceArray.at(-1) >= 10:
+                case choiceArray[objectIndex] >= 10:
                     bracketColor = "bracketColor_orange";
                     break;
-                case choiceArray.at(-1) >= 8:
+                case choiceArray[objectIndex] >= 8:
                     bracketColor = "bracketColor_green";
                     break;
-                case choiceArray.at(-1) >= 6:
+                case choiceArray[objectIndex] >= 6:
                     bracketColor = "bracketColor_yellow";
                     break;
-                case choiceArray.at(-1) >= 4:
+                case choiceArray[objectIndex] >= 4:
                     bracketColor = "bracketColor_blue";
                     break;
-                case choiceArray.at(-1) >= 3:
+                case choiceArray[objectIndex] >= 3:
                     bracketColor = "bracketColor_red";
                     break;
-                case choiceArray.at(-1) >= 2:
+                case choiceArray[objectIndex] >= 2:
                     bracketColor = "bracketColor_black";
                     break;
-                case choiceArray.at(-1) >= 1:
+                case choiceArray[objectIndex] >= 1:
                     bracketColor = "bracketColor_white";
                     break;
             };
             break; 
         case max == 12:
             switch(true){
-                case choiceArray.at(-1) >= 11:
+                case choiceArray[objectIndex] >= 11:
                     bracketColor = "bracketColor_pink";
                     break;
-                case choiceArray.at(-1) >= 9:
+                case choiceArray[objectIndex] >= 9:
                     bracketColor = "bracketColor_orange";
                     break;
-                case choiceArray.at(-1) >= 7:
+                case choiceArray[objectIndex] >= 7:
                     bracketColor = "bracketColor_green";
                     break;
-                case choiceArray.at(-1) >= 5:
+                case choiceArray[objectIndex] >= 5:
                     bracketColor = "bracketColor_yellow";
                     break;
-                case choiceArray.at(-1) >= 4:
+                case choiceArray[objectIndex] >= 4:
                     bracketColor = "bracketColor_blue";
                     break;
-                case choiceArray.at(-1) >= 3:
+                case choiceArray[objectIndex] >= 3:
                     bracketColor = "bracketColor_red";
                     break;
-                case choiceArray.at(-1) >= 2:
+                case choiceArray[objectIndex] >= 2:
                     bracketColor = "bracketColor_black";
                     break;
-                case choiceArray.at(-1) >= 1:
+                case choiceArray[objectIndex] >= 1:
                     bracketColor = "bracketColor_white";
                     break;
             };
             break; 
         case max == 11:
             switch(true){
-                case choiceArray.at(-1) >= 10:
+                case choiceArray[objectIndex] >= 10:
                     bracketColor = "bracketColor_pink";
                     break;
-                case choiceArray.at(-1) >= 8:
+                case choiceArray[objectIndex] >= 8:
                     bracketColor = "bracketColor_orange";
                     break;
-                case choiceArray.at(-1) >= 6:
+                case choiceArray[objectIndex] >= 6:
                     bracketColor = "bracketColor_green";
                     break;
-                case choiceArray.at(-1) >= 5:
+                case choiceArray[objectIndex] >= 5:
                     bracketColor = "bracketColor_yellow";
                     break;
-                case choiceArray.at(-1) >= 4:
+                case choiceArray[objectIndex] >= 4:
                     bracketColor = "bracketColor_blue";
                     break;
-                case choiceArray.at(-1) >= 3:
+                case choiceArray[objectIndex] >= 3:
                     bracketColor = "bracketColor_red";
                     break;
-                case choiceArray.at(-1) >= 2:
+                case choiceArray[objectIndex] >= 2:
                     bracketColor = "bracketColor_black";
                     break;
-                case choiceArray.at(-1) >= 1:
+                case choiceArray[objectIndex] >= 1:
                     bracketColor = "bracketColor_white";
                     break;
             };
             break;
         case max == 10:
             switch(true){
-                case choiceArray.at(-1) >= 9:
+                case choiceArray[objectIndex] >= 9:
                     bracketColor = "bracketColor_pink";
                     break;
-                case choiceArray.at(-1) >= 7:
+                case choiceArray[objectIndex] >= 7:
                     bracketColor = "bracketColor_orange";
                     break;
-                case choiceArray.at(-1) >= 6:
+                case choiceArray[objectIndex] >= 6:
                     bracketColor = "bracketColor_green";
                     break;
-                case choiceArray.at(-1) >= 5:
+                case choiceArray[objectIndex] >= 5:
                     bracketColor = "bracketColor_yellow";
                     break;
-                case choiceArray.at(-1) >= 4:
+                case choiceArray[objectIndex] >= 4:
                     bracketColor = "bracketColor_blue";
                     break;
-                case choiceArray.at(-1) >= 3:
+                case choiceArray[objectIndex] >= 3:
                     bracketColor = "bracketColor_red";
                     break;
-                case choiceArray.at(-1) >= 2:
+                case choiceArray[objectIndex] >= 2:
                     bracketColor = "bracketColor_black";
                     break;
-                case choiceArray.at(-1) >= 1:
+                case choiceArray[objectIndex] >= 1:
                     bracketColor = "bracketColor_white";
                     break;
             };
             break; 
         case max <= 9:
             switch(true){
-                case choiceArray.at(-1) >= 8:
+                case choiceArray[objectIndex] >= 8:
                     bracketColor = "bracketColor_pink";
                     break;
-                case choiceArray.at(-1) == 7:
+                case choiceArray[objectIndex] == 7:
                     bracketColor = "bracketColor_orange";
                     break;
-                case choiceArray.at(-1) == 6:
+                case choiceArray[objectIndex] == 6:
                     bracketColor = "bracketColor_green";
                     break;
-                case choiceArray.at(-1) == 5:
+                case choiceArray[objectIndex] == 5:
                     bracketColor = "bracketColor_yellow";
                     break;
-                case choiceArray.at(-1) == 4:
+                case choiceArray[objectIndex] == 4:
                     bracketColor = "bracketColor_blue";
                     break;
-                case choiceArray.at(-1) == 3:
+                case choiceArray[objectIndex] == 3:
                     bracketColor = "bracketColor_red";
                     break;
-                case choiceArray.at(-1) == 2:
+                case choiceArray[objectIndex] == 2:
                     bracketColor = "bracketColor_black";
                     break;
-                case choiceArray.at(-1) == 1:
+                case choiceArray[objectIndex] == 1:
                     bracketColor = "bracketColor_white";
                     break;
             };
             break;
     };
+}
+
+// ソート関数
+const sortChoice = (first,last) =>{
+    return first - last;
 }
 
 // ページを読み込む
@@ -292,6 +299,9 @@ window.onload = function () {
         max = document.getElementById("max").valueAsNumber;
         choice = document.getElementById("choice").valueAsNumber;
 
+        // MODEを取得する
+        mode = document.querySelector("input[name=mode]:checked");
+
         // 
         if(choice >= max){
             // CHOICEがMAX以上の場合、エラーを表示する
@@ -299,7 +309,7 @@ window.onload = function () {
             document.getElementById('error').style.display = "block";
             document.getElementById('output').style.display = "none";
         }
-        else{
+        else if (mode.value === "tan"){
             // 枠配列の生成
             maxArray = range(min,max,1);
 
@@ -316,6 +326,7 @@ window.onload = function () {
                 maxArray.splice(randomIndex,1);
 
                 // 枠色の割り当て
+                objectIndex = choiceArray.indexOf(choiceArray.at(-1))
                 allotColor()
 
                 // 取得した数字をdiv要素として出力
@@ -336,6 +347,51 @@ window.onload = function () {
                     outputElement.appendChild(arrow);
                 }
             }
+        }
+        else if(mode.value ==="fuku"){
+            // 枠配列の生成
+            maxArray = range(min,max,1);
+
+            // 出力場所の取得
+            outputElement = document.getElementById('output');
+
+            // 数字の数だけランダムに数字を取得する
+            for(let i = choice; i > 0; i--){
+                // 取得した数字を出力用配列に追加
+                randomIndex = Math.floor(Math.random() * maxArray.length);
+                choiceArray.push(maxArray[randomIndex]);
+
+                // 既に取得した数字を番号配列から削除
+                maxArray.splice(randomIndex,1);
+            }
+            // 選択した数字を昇順にソート
+            choiceArray.sort(sortChoice);
+
+            // 
+            for(let j = 0; j < choiceArray.length; j++){
+                // 枠色の割り当て
+                objectIndex = j
+                allotColor()
+
+                // 現在の値が1以上の場合、-を追加する
+                if(j >= 1){
+                    arrow = document.createElement('div');
+                    arrow.classList.add('arrow')
+                    arrow.innerHTML = "-";
+                    outputElement.appendChild(arrow);
+                }
+
+                // 取得した数字をdiv要素として出力
+                choiceElement = [];
+                var outputchild = choiceArray[j];
+
+                choiceElement[outputchild] = document.createElement('div');
+                choiceElement[outputchild].classList.add(bracketColor);
+                choiceElement[outputchild].style.width = "50px";
+                choiceElement[outputchild].innerHTML = choiceArray[j];
+
+                outputElement.appendChild(choiceElement[outputchild]);
+            };
         }
     }
 }
